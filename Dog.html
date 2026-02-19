@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
-<body style="font-size:40px;text-align:center;">
-<div>狗</div>
-<div style="font-size:20px;">Dog</div>
+<head>
+<meta charset="UTF-8">
+<title>狗 Dog Sound</title>
+</head>
 
-<audio autoplay>
-  <source src="狗.mp3" type="audio/mpeg">
-</audio>
+<body>
+<h1>狗 (Dog)</h1>
+
+<audio id="sound" src="狗.mp3"></audio>
+
+<script>
+window.onload = function() {
+    document.getElementById("sound").play();
+};
+</script>
 
 </body>
 </html>
