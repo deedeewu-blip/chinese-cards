@@ -3,21 +3,53 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>狗 Dog</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding-top: 40px;
+  background: #ffffff;
+  color: #1f2a44;
+}
+h1 { font-size: 70px; margin-bottom: 10px; }
+h2 { font-size: 32px; color: #555; }
+button {
+  font-size: 22px;
+  padding: 12px 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #2d6cdf;   /* brand blue */
+  color: white;
+}
+button:hover { background: #1f4fbf; }
+.footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+}
+</style>
 </head>
 
-<body style="text-align:center; font-family:Arial; padding-top:50px;">
+<body>
 
-<h1 style="font-size:60px;">狗</h1>
-<p style="font-size:30px;">Dog</p>
+<h1>狗</h1>
+<h2>Dog</h2>
 
-<button onclick="document.getElementById('sound').play()" 
-        style="font-size:30px; padding:15px 40px;">
-▶ Play Sound
-</button>
+<!-- Buttons -->
+<button onclick="normal.play()">🔊 Normal</button>
+<button onclick="slow.play()">🐢 Slow</button>
+<button onclick="sentence.play()">🗣 Sentence</button>
 
-<audio id="sound">
-  <source src="狗.mp3" type="audio/mpeg">
-</audio>
+<!-- Audio Files -->
+<audio id="normal" src="dog-normal.mp3"></audio>
+<audio id="slow" src="dog-slow.mp3"></audio>
+<audio id="sentence" src="dog-sentence.mp3"></audio>
+
+<div class="footer">
+<p>从零开始 · Shuodu</p>
+<p>© 2026 Shuodu Learning</p>
+</div>
 
 </body>
 </html>
