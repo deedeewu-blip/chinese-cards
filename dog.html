@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>狗 Dog</title>
+<title>狗 Dog | Shuodu</title>
+
 <style>
 body {
-  text-align: center;
   font-family: Arial, sans-serif;
-  padding-top: 40px;
-  background: #ffffff;
-  color: #1f2a44;
+  text-align: center;
+  padding: 30px;
+  background: #fff7f6;
+  color: #333;
 }
-h1 { font-size: 70px; margin-bottom: 10px; }
-h2 { font-size: 32px; color: #555; }
-button {
-  font-size: 22px;
-  padding: 12px 30px;
-  margin: 10px;
-  border-radius: 10px;
-  border: none;
-  background: #2d6cdf;   /* brand blue */
+.cn {
+  font-size: 72px;
+  font-weight: bold;
+}
+.en {
+  font-size: 28px;
+  color: #555;
+}
+.btn {
+  font-size: 26px;
+  padding: 15px 40px;
+  margin-top: 20px;
+  background: #e94b4b;
   color: white;
+  border: none;
+  border-radius: 10px;
 }
-button:hover { background: #1f4fbf; }
-.footer {
-  margin-top: 40px;
-  font-size: 14px;
+.tip {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brand {
+  margin-top: 50px;
+  font-size: 16px;
   color: #999;
 }
 </style>
@@ -33,22 +48,27 @@ button:hover { background: #1f4fbf; }
 
 <body>
 
-<h1>狗</h1>
-<h2>Dog</h2>
+<div class="cn">狗</div>
+<div class="en">Dog</div>
 
-<!-- Buttons -->
-<button onclick="normal.play()">🔊 Normal</button>
-<button onclick="slow.play()">🐢 Slow</button>
+<button class="btn" onclick="document.getElementById('sound').play()">
+🔊 Play Pronunciation
+</button>
 
+<audio id="sound">
+  <source src="狗.mp3" type="audio/mpeg">
+</audio>
 
-<!-- Audio Files -->
-<audio id="normal" src="dog.mp3"></audio>
-<audio id="slow" src="dog-slow.mp3"></audio>
+<div class="tip">
+<strong>Parent Tip:</strong><br>
+Say “gǒu” slowly 3–5 times while showing the card.  
+Point to a real dog or a picture.  
+Repeat daily for natural language input.
+</div>
 
-
-<div class="footer">
-<p>从零开始 说读同步</p>
-<p>© @2026 Shuodu Learning</p>
+<div class="brand">
+从零开始 · 认知同行<br>
+Shuodu.com © 2026
 </div>
 
 </body>
